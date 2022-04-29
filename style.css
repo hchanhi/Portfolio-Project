@@ -37,6 +37,8 @@ img[src$='.png'] {
   --weight-regular: 400;
 
   --size-border-radius: 4px;
+
+  --animation-duration: 300ms;
 }
 
 * {
@@ -120,7 +122,7 @@ p {
 .navbar_logo img {
   width: 32px;
   height: 32px;
-  text-align: center;
+  line-height: 32px;
 }
 
 .navbar_menu_item {
@@ -139,7 +141,7 @@ p {
 }
 
 #home {
-  background: url('imgs/wave-haikei.png') center/cover no-repeat;
+  /* background: url('imgs/home_background.png') center/cover no-repeat; */
   padding: 40px;
   text-align: center;
 }
@@ -148,20 +150,89 @@ p {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  border: 2px solid var(--color-light-white);
+  border: 2px solid var(--color-black);
 }
 
 .home_title,
 .home_descripntion {
-  color: var(--color-light-white);
+  color: var(--color-black);
 }
 
 .home_contact {
-  color: var(--color-white);
+  color: var(--color-black);
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   margin: 24px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-black);
   border-radius: var(--size-border-radius);
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.about_majors {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.major_icon {
+  width: 170px;
+  height: 170px;
+  line-height: 170px;
+  font-size: 70px;
+  color: var(--color-blue);
+  margin: auto;
+  border: 2px solid var(--color-blue);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.major_icon i:hover {
+  color: var(--color-dark-blue);
+  transform: rotate(-30deg) scale(1.1);
+}
+.major_icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.major_title,
+.major_deccription {
+  color: var(--color-light-grey);
+}
+
+.major_deccription {
+  font: var(--font-small);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+}
+
+.job_logo {
+  width: 250px;
+}
+
+.job_description {
+  margin: 0 16px;
+  text-align: left;
+}
+
+.job_name,
+.job_period {
+  color: var(--color-light-grey);
+}
+
+.job_name {
+  font-size: var(--font-small);
+}
+
+.job_period {
+  font-size: var(--font-micro);
 }
