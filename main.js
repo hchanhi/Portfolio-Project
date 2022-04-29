@@ -20,7 +20,6 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-
   scrollIntoView(link);
 });
 
@@ -28,6 +27,13 @@ navbarMenu.addEventListener('click', (event) => {
 const homeContactBtn = document.querySelector('.home_contact');
 homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
+});
+
+// 홈 섹션 투명하게
+const home = document.querySelector('.home_container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', () => {
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 function scrollIntoView(selector) {
