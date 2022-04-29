@@ -20,7 +20,14 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
+  navbarMenu.classList.remove('open');
   scrollIntoView(link);
+});
+
+// 토글 버튼
+const navbarToggleBtn = document.querySelector('.navbar_toggle_btn');
+navbarToggleBtn.addEventListener('click', () => {
+  navbarMenu.classList.toggle('open');
 });
 
 // contactme 버튼 활성화
@@ -60,13 +67,23 @@ workBtnContainer.addEventListener('click', (e) => {
   if (filter == null) {
     return;
   }
-  projects.forEach((project) => {
-    if (filter == '*' || filter == project.dataset.type) {
-      project.classList.remove('invisible');
-    } else {
-      project.classList.add('invisible');
-    }
-  });
+
+  // 이전 버튼 선택 제거후 새로 선택
+  const active = document.querySelector('.category_btn.selected');
+  active.classList.remove('selected');
+  const target =
+    e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+  target.classList.add('selected');
+  setTimeout(() => {
+    projects.forEach((project) => {
+      if (filter == '*' || filter == project.dataset.type) {
+        project.classList.remove('invisible');
+      } else {
+        project.classList.add('invisible');
+      }
+    });
+    projectContainer.classList.remove('anim_out');
+  }, 300);
 });
 
 function scrollIntoView(selector) {
