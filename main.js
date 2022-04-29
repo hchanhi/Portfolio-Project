@@ -20,7 +20,17 @@ navbarMenu.addEventListener('click', (event) => {
   if (link == null) {
     return;
   }
-  console.log(event.target.dataset.link);
-  const scrollTo = document.querySelector(link);
-  scrollTo.scrollIntoView({ behavior: 'smooth' });
+
+  scrollIntoView(link);
 });
+
+// contactme 버튼 활성화
+const homeContactBtn = document.querySelector('.home_contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
+  const scrollTo = document.querySelector(selector);
+  scrollTo.scrollIntoView({ behavior: 'smooth' });
+}
