@@ -121,7 +121,7 @@ p {
   padding: 8px;
 }
 
-.navbar_menu1 {
+.navbar_menu {
   display: flex;
 }
 
@@ -496,7 +496,7 @@ p {
     background-color: var(--color-blue);
   }
 
-  .navbar_menu1 {
+  .navbar_menu {
     flex-direction: column;
   }
 
