@@ -211,6 +211,7 @@ p {
 .about_majors {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   margin: 80px 0;
 }
 .major div {
@@ -225,7 +226,6 @@ p {
   width: 420px;
   height: 170px;
   line-height: 170px;
-
   font-size: 70px;
   background-color: var(--color-white);
   color: var(--color-blue);
@@ -239,7 +239,6 @@ p {
   width: 420px;
   height: 750px;
   line-height: 750px;
-
   font-size: 70px;
   background-color: var(--color-white);
   color: var(--color-blue);
@@ -253,11 +252,9 @@ p {
   width: 420px;
   height: 250px;
   line-height: 250px;
-
   font-size: 70px;
   background-color: var(--color-white);
   color: var(--color-blue);
-
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
   box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
@@ -268,11 +265,9 @@ p {
   width: 420px;
   height: 250px;
   line-height: 250px;
-
   font-size: 70px;
   background-color: var(--color-white);
   color: var(--color-blue);
-
   border: 2px solid var(--color-white);
   border-radius: var(--size-border-radius);
   box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
