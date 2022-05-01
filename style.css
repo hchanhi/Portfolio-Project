@@ -37,7 +37,7 @@ img[src$='.png'] {
   --weight-semi-bold: 600;
   --weight-regular: 400;
 
-  --size-border-radius: 4px;
+  --size-border-radius: 10px;
 
   --animation-duration: 300ms;
 }
@@ -204,7 +204,7 @@ p {
 }
 
 .section_container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -213,30 +213,84 @@ p {
   justify-content: space-between;
   margin: 80px 0;
 }
+.major div {
+  margin: 15px;
+}
 
-.major_icon {
-  width: 170px;
+.major img {
+  width: 400px;
+}
+
+.major_img_front {
+  width: 420px;
   height: 170px;
   line-height: 170px;
+
   font-size: 70px;
+  background-color: var(--color-white);
   color: var(--color-blue);
-  margin: auto;
-  border: 2px solid var(--color-blue);
-  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
   margin-bottom: 16px;
 }
 
-.major_icon i:hover {
-  color: var(--color-dark-blue);
-  transform: rotate(-30deg) scale(1.1);
+.major_img_back {
+  width: 420px;
+  height: 750px;
+  line-height: 750px;
+
+  font-size: 70px;
+  background-color: var(--color-white);
+  color: var(--color-blue);
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  margin-bottom: 16px;
 }
-.major_icon i {
-  transition: all var(--animation-duration) ease;
+
+.major_img_version {
+  width: 420px;
+  height: 250px;
+  line-height: 250px;
+
+  font-size: 70px;
+  background-color: var(--color-white);
+  color: var(--color-blue);
+
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  margin-bottom: 30px;
+}
+
+.major_img_certificate {
+  width: 420px;
+  height: 250px;
+  line-height: 250px;
+
+  font-size: 70px;
+  background-color: var(--color-white);
+  color: var(--color-blue);
+
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+  box-shadow: 1rem 1rem 1rem 0 rgb(68 68 68 / 20%);
+  margin-bottom: 16px;
+}
+
+.major_img_front:hover,
+.major_img_back:hover,
+.major_img_version:hover,
+.major_img_certificate:hover {
+  transform: translateY(10px);
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 .major_title,
 .major_deccription {
-  color: var(--color-light-grey);
+  color: var(--color-dark-grey);
+  font-weight: bolder;
 }
 
 .major_deccription {
@@ -513,6 +567,9 @@ p {
 
   .navbar_menu.open {
     display: block;
+  }
+  .name {
+    font-size: var(--font-large);
   }
 
   .about_majors {

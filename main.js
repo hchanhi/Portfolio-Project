@@ -91,34 +91,34 @@ function scrollIntoView(selector) {
   scrollTo.scrollIntoView({ behavior: 'smooth' });
 }
 
-const sectionID = ['#home', '#about', '#skills', '#work', '#contact'];
+// const sectionID = ['#home', '#about', '#skills', '#work', '#contact'];
 
-const sections = sectionID.map((id) => document.querySelector(id));
-const navItems = sectionID.map((id) =>
-  document.querySelector(`[data-link="${id}"]`)
-);
+// const sections = sectionID.map((id) => document.querySelector(id));
+// const navItems = sectionID.map((id) =>
+//   document.querySelector(`[data-link="${id}"]`)
+// );
 
-let selectedNavItem = navItems[0];
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.3,
-};
+// let selectedNavItem = navItems[0];
+// const observerOptions = {
+//   root: null,
+//   rootMargin: '0px',
+//   threshold: 0.3,
+// };
 
-const observerCallback = (entries, observer) => {
-  entries.forEach((entry) => {
-    console.log(entry.target);
-    const index = sectionID.indexOf(`#${entry.target.id}`);
-    let selectedIndex;
-    if (entry.boundingClientRect.y < 0) {
-      selectedIndex = index + 1;
-    } else {
-      selectedIndex = index - 1;
-    }
-    selectedNavItem.classList.remove('active');
-    selectedNavItem = navItems[selectedIndex];
-    selectedNavItem.classList.add('active');
-  });
-};
-const observer = new IntersectionObserver(observerCallback, observerOptions);
-sections.forEach((section) => observer.observe(section));
+// const observerCallback = (entries, observer) => {
+//   entries.forEach((entry) => {
+//     console.log(entry.target);
+//     const index = sectionID.indexOf(`#${entry.target.id}`);
+//     let selectedIndex;
+//     if (entry.boundingClientRect.y < 0) {
+//       selectedIndex = index + 1;
+//     } else {
+//       selectedIndex = index - 1;
+//     }
+//     selectedNavItem.classList.remove('active');
+//     selectedNavItem = navItems[selectedIndex];
+//     selectedNavItem.classList.add('active');
+//   });
+// };
+// const observer = new IntersectionObserver(observerCallback, observerOptions);
+// sections.forEach((section) => observer.observe(section));
