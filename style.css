@@ -592,6 +592,43 @@ p {
     margin-bottom: 0px;
   }
 
+  .major div {
+    margin: auto;
+  }
+  .major_img_back {
+    width: 300px;
+    height: 550px;
+  }
+  .major_img_front {
+    width: 300px;
+    height: 120px;
+  }
+  .major_img_version {
+    width: 300px;
+    height: 190px;
+  }
+  .major_img_version img {
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  .major_img_certificate {
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+  }
+
+  .major img {
+    width: 300px;
+  }
+
+  .major_img_back:hover,
+  .major_img_front:hover,
+  .major_img_version:hover,
+  .major_img_certificate:hover {
+    transform: none;
+    transition: none;
+  }
+
   .major {
     margin-bottom: 30px;
   }
