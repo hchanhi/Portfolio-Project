@@ -198,7 +198,7 @@ p {
 }
 
 .section {
-  padding: 50px;
+  padding: 80px;
   text-align: center;
   margin: auto;
 }
@@ -279,6 +279,10 @@ p {
   margin-bottom: 16px;
 }
 
+.major_img_certificate p {
+  color: var(--color-black);
+}
+
 .major_img_front:hover,
 .major_img_back:hover,
 .major_img_version:hover,
@@ -289,7 +293,7 @@ p {
 
 .major_title,
 .major_deccription {
-  color: var(--color-dark-grey);
+  color: var(--color-light-white);
   font-weight: bolder;
 }
 
@@ -325,7 +329,17 @@ p {
 }
 
 #skills {
-  background-color: var(--color-light-blue);
+  background-color: var(--color-dark-blue);
+}
+
+#skills h1,
+h2,
+p {
+  color: var(--color-white);
+}
+
+#skills h1 {
+  font-size: 5rem;
 }
 
 .skillset {
