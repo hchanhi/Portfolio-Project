@@ -37,6 +37,11 @@ img[src$='.png'] {
   --weight-semi-bold: 600;
   --weight-regular: 400;
 
+  /* 폰트 간격 */
+  --space-large: 32px;
+  --space-medium: 16px;
+  --space-small: 8px;
+
   --size-border-radius: 10px;
 
   --animation-duration: 300ms;
@@ -100,6 +105,7 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
+  padding-bottom: 30px;
 }
 
 /* Navbar */
